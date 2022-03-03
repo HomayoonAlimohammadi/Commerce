@@ -1,0 +1,20 @@
+{% extends 'layout.html' %} 
+
+{% block title %} 
+Close Listing 
+{% endblock %} 
+
+
+{% block body %} 
+<div class="container py-5" style="text-align: center;">
+    <h5 class="text-dark">
+        Are you sure you want to close listing: <span class='text-info'>{{ listing.title }}</span>
+    </h5>
+</br>
+    <form action="{% url 'auction:close_listing' listing.id %}" method="post">
+        {% csrf_token %} 
+        <input type="submit" value="Yes, Close" class="btn btn-success"/>
+        <a href="{% url 'auction:listing' listing.id %}"><button type="button" class="btn btn-secondary">No</button></a>
+    </form>
+</div>
+{% endblock %}

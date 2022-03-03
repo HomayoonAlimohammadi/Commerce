@@ -1,0 +1,32 @@
+{% extends 'layout.html' %} 
+
+{% block title %} 
+Create Listing
+{% endblock %} 
+
+{% block body %}
+{% load crispy_forms_tags %} 
+<div class="container py">
+    <h1>
+        {% if method == 'create' %} 
+        Create Listing
+        {% elif method == 'edit' %} 
+        Edit Listing
+        {% endif %} 
+    </h1>
+{% if message %} 
+<h2 style="color:red;">
+{{ message }}
+</h2>
+{% endif %} 
+<form action="." method="post" enctype='multipart/form-data'>
+    {% csrf_token %} 
+    {{ form|crispy }}
+    {% if method == 'create' %} 
+    <input class="btn btn-primary" type="submit" value="Create">
+    {% elif method == 'edit' %}
+    <input class="btn btn-primary" type="submit" value="Save">
+    {% endif %}
+</form>
+</div>
+{% endblock %}

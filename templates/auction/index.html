@@ -1,0 +1,59 @@
+{% extends 'layout.html' %} 
+
+{% block title %} 
+Auction 
+{% endblock %} 
+
+{% block body %} 
+
+{% load static %}
+<style>
+    body{
+        padding: 1rem 1rem;
+    }
+    .image-parent {
+        max-width: 200px;
+    }
+</style>
+<div class="container"> 
+    <div class="row">
+        <div class="col-12 col-sm-8 col-lg-12">
+            <!-- <h6 class="text-muted">Active Listings</h6> -->
+            <ul class="list-group">
+                {% for listing in listings %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href='{% url "auction:listing" listing.id %}'>
+                            <h3>{{ listing.title }}</h3><br/>
+                        </a>
+                        {% if listing.description|length > 20 %}
+                        Go to listing page for more details.<br/>
+                        {% else %} 
+                        {{ listing.description }}<br/>
+                        {% endif %}
+                        {% if listing.is_active %} 
+                        <h5 class="text-success">Active</h5>
+                        {% else %} 
+                        <h5 class="text-danger">Closed</h5>
+                        {% endif %} 
+                        <b>Starting Price: {{ listing.starting_price }} $
+                            {% if listing.current_bid %} 
+                            <h5 class="text-primary">Current Bid: {{ listing.current_bid.amount }} $</h5>
+                        {% endif %} 
+                        </b>
+                        
+                        <div class="image-parent">
+                        {% if listing.image %} 
+                            <img src="{{ listing.image.url }}" class="img-fluid">
+                            {% else %}  
+                            <img src="{% static 'Auction/no_image.jpg' %}" class="img-fluid">
+                            {% endif %}
+                        </div>
+                        {% empty %} 
+                            No Active Listings are available at the moment!
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

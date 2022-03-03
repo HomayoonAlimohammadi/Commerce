@@ -1,0 +1,5 @@
+<a href='{% url "auction:listing" listing.id %}'>
+    {{ listing.title }}<br/>
+</a>
+{{ listing.description }}<br/>
+Starting Price: <b>{{ listing.starting_price }}</b>
