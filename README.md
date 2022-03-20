@@ -21,6 +21,9 @@
 - Secure user <b>Authentication</b>
 - Thought through <b>Authorization</b>
 - Well designed Posting system.
+- Search System
+- Category System
+- Filtering the listings based on User or Active/Closed
 - UX friendly <b>Watchlist</b> and <b>Commenting</b> system
 
 ## What's Next:
@@ -30,4 +33,9 @@
 - Adding <b>Advanced Searching Options</b> amongst listings.
 
 ### Feel free to send me any feedbacks regarding this project. I'll totally appreciate it!
+![Sample Email](https://github.com/homayoonalimohammadi/Commerce/blob/main/media/Screenshot%20(355).png?raw=true)
+![Sample Email](https://github.com/homayoonalimohammadi/Commerce/blob/main/media/Screenshot%20(356).png?raw=true)
+![Sample Email](https://github.com/homayoonalimohammadi/Commerce/blob/main/media/Screenshot%20(357).png?raw=true)
+![Sample Email](https://github.com/homayoonalimohammadi/Commerce/blob/main/media/Screenshot%20(358).png?raw=true)
+![Sample Email](https://github.com/homayoonalimohammadi/Commerce/blob/main/media/Screenshot%20(359).png?raw=true)
 
