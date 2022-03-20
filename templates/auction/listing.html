@@ -102,6 +102,7 @@ Listing: {{ listing.title|title }}
         <form action="{% url 'auction:comment' listing.id %}" method="post">
             {% csrf_token %} 
             {{ comment_form|crispy }}
+            <br/>
             <input type="submit" value="Post" class='btn btn-success'/>
         </form>
         {% else %} 

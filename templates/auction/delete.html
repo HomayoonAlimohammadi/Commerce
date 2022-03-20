@@ -6,7 +6,7 @@ Logout
 
 {% block body %} 
 <div class="container py-5" style="text-align: center;">
-    <h5 class="">Are you sure you want to delete this listing?</h5><br/>
+    <h5 class="text-muted">Are you sure you want to delete this listing?</h5><br/>
     <form action="{% url 'auction:delete_listing' listing.id %}" method="post">
         {% csrf_token %}
         <button class='btn btn-primary' type="submit">Yes</button>

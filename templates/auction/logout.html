@@ -6,7 +6,7 @@ Logout
 
 {% block body %} 
 <div class="container py-5" style="text-align: center;">
-    <h5 class="">You are already logged in as <span class='text-info'>{{ request.user.username|title }}</span><br/>
+    <h5 class="text-muted">You are already logged in as <span class='text-info'>{{ request.user.username|title }}</span><br/>
     Are you sure you want to Logout?</h5><br/>
     <form action="{% url 'auction:logout' %}" method="post">
         {% csrf_token %}
