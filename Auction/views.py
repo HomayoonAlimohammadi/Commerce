@@ -6,14 +6,7 @@ from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, Http404
 from .models import Listing, Comment, Category, Bid
-from .forms import (
-    CreateBidForm,
-    CreateCategoryForm,
-    CreateCommentForm,
-    CreateListingForm,
-    LoginForm,
-    CreateUserForm,
-)
+from .forms import *
 from django.contrib import messages
 from django.db.models import Q
 

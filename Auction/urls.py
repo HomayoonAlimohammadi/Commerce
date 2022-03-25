@@ -1,25 +1,5 @@
 from django.urls import path, re_path
-from .views import (
-    index_view,
-    listing_view,
-    create_listing_view,
-    edit_listing_view,
-    delete_listing_view,
-    close_listing_view,
-    login_view,
-    logout_view,
-    register_view,
-    search_view,
-    toggle_watch,
-    watchlist_view,
-    add_comment_view,
-    delete_comment_view,
-    category_view,
-    category_list_view,
-    add_bid_view,
-    active_index_view,
-    my_listings_view,
-)
+from .views import *
 
 
 app_name = 'auction'
