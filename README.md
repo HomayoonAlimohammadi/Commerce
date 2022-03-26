@@ -25,12 +25,13 @@
 - Secure user <b>Authentication</b>
 - Thought through <b>Authorization</b>
 - Well designed Posting system.
-- Search System
-- Category System
-- Filtering the listings based on User or Active/Closed
+- <b></b>Search</b> System
+- <b>Category</b> System
+- <b>Filtering</b> the listings based on User or Active/Closed
 - UX friendly <b>Watchlist</b> and <b>Commenting</b> system
 - Robust Database management with <b>PostgreSQL</b>
 - Well designed Client-side environment powered by <b>React</b>
+- Robust <b>CI/CD</b> with the help of <b>Unit Tests</b> and <b>Docker</b>
 
 ## What's Next:
 - Adding other types of User for furthur development.
