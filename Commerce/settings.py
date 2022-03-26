@@ -13,6 +13,14 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 from django.contrib.messages import constants as messages
+import dotenv
+import pathlib
+
+DOT_ENV_PATH = pathlib.Path() / '.env'
+if DOT_ENV_PATH.exists():
+    dotenv.read_dotenv(str(DOT_ENV_PATH))
+else:
+    print('No .env found, make sure to add one.')
 
 
 MESSAGE_TAGS = {
@@ -158,5 +166,4 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
