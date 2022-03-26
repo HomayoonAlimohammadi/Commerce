@@ -94,11 +94,11 @@ WSGI_APPLICATION = 'Commerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'commerce_sql_db',
-        'USER': 'postgres',
-        'PASSWORD': 'pazzo1991', # Change to .env file data
+        'NAME': os.environ.get('POSTGRES_NAME'),
+        'USER': os.environ.get('POSTGRES_USER'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'), # Change to .env file data
         'HOST': 'localhost',
-        'PORT': '', # Not needed since the default 
+        'PORT': '5432', # '' means the default (5432) 
     }
 }
 
