@@ -39,6 +39,21 @@ class Listing(models.Model):
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
     current_bid = models.ForeignKey(Bid, on_delete=models.CASCADE, blank=True, null=True)
     is_active = models.BooleanField(default=True)
+
+    def serialize(self):
+
+        return {
+            'id': self.id,
+            'title': self.title,
+            'user': self.user.username,
+            'category': [category.name for category in self.category.all()],
+            'starting_price': self.starting_price,
+            'current_bid': self.current_bid.amount if self.current_bid else None,
+            'current_bidder': self.current_bid.user.username if self.current_bid else None,
+            'is_active': self.is_active,
+            'created_at': self.created_at.strftime('%Y-%m-%d %H:%M'),
+            'updated_at': self.updated_at.strftime('%Y-%m-%d %H:%M'),
+        }
     
 
 class Comment(models.Model):

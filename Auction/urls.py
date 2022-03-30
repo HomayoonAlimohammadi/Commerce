@@ -5,6 +5,11 @@ from .views import *
 app_name = 'auction'
 urlpatterns = [
     path('', index_view, name='index'),
+
+    # API urls
+    path('api/<str:type>', listings, name='api-listings'),
+    # API urls
+
     path('active/', active_index_view, name='active_index'),
     path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),

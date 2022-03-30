@@ -1,17 +1,48 @@
-from collections import UserList
-import http
-from http.client import HTTPResponse
 from django.shortcuts import render
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponseRedirect, Http404
+from django.http import HttpResponseRedirect, Http404, JsonResponse
 from .models import Listing, Comment, Category, Bid
 from .forms import *
 from django.contrib import messages
 from django.db.models import Q
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
 
-# Create your views here.
+
+@api_view(['GET'])
+def listings(request, type):
+
+    if type == 'home':
+        listings = Listing.objects.all()
+    
+    elif type == 'active':
+        listings = Listing.objects.filter(is_active = True).all()
+
+    elif type == 'category':
+        name = request.GET['name']
+        category = Category.objects.get(name=name)
+        listings = Listing.objects.filter(category = category).all()
+
+    elif type == 'my_listings':
+        if request.user.is_authenticated:
+            listings = Listing.objects.filter(user = request.user).all()
+        else:
+            listings = []
+
+    elif type == 'watchlist':
+        if request.user.is_authenticated:
+            listings = request.user.watchlist.all()
+        else:
+            listings = []
+
+    listings = [listing.serialize() for listing in listings]
+
+    return Response(listings)
+    
+
+
 
 def index_view(request):
     listings = Listing.objects.all()
