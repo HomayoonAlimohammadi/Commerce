@@ -6,7 +6,6 @@
 <img align=center src="https://img.shields.io/badge/CSS-informational?style=flat&logo=CSS3&logoColor=1572B6&color=292A2D" />
 <img align=center src="https://img.shields.io/badge/Javascript-informational?style=flat&logo=Javascript&logoColor=F7DF1E&color=292A2D" />
 <img align=center src="https://img.shields.io/badge/PostgreSQL-informational?style=flat&logo=PostgreSQL&logoColor=4169E1&color=292A2D" />
-<img align=center src="https://img.shields.io/badge/React-informational?style=flat&logo=React&logoColor=61DAFB&color=292A2D" />
 <br/>
 </p>
 <p> <h3>This project was for the purpose of training and illustrating my abilities in <b>Web Development</b>.</h3> <br/>
@@ -16,7 +15,7 @@
   Authorization was considered regarding <b>Editing</b> and <b>Deleting</b> the listings themselves.<br/>
   Users can win the auction whenever the auction was closed either after the given time or at the auctioner's will.<br/> 
   Simple rules for a standard auction was applied. Any amount higher than the current bid would put you in the lead!<br/>
-  The backend is developed with the help of <b>Django</b>, a Web Framework for Python. In terms of Front-end, with the help of <b>JavaScript</b>, specifically <b>React</b>, a delightful and interactive client-side environment was achieved.. Thanks to Bootstrapp, which is a CSS library, it has decent looks too.  the Database was handled with the PostgreSQL.
+  The backend is developed with the help of <b>Django</b>, a Web Framework for Python. Thanks to <b>Bootstrapp</b>, which is a CSS library, it has decent looks too. the Database was handled with the <b>PostgreSQL</b>.
   
 </p>
 
@@ -30,7 +29,6 @@
 - <b>Filtering</b> the listings based on User or Active/Closed
 - UX friendly <b>Watchlist</b> and <b>Commenting</b> system
 - Robust Database management with <b>PostgreSQL</b>
-- Well designed Client-side environment powered by <b>React</b>
 - Robust <b>CI/CD</b> with the help of <b>Unit Tests</b> and <b>Docker</b>
 
 ## What's Next:
