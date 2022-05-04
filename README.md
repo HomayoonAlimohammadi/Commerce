@@ -4,7 +4,6 @@
 <img align=center src="https://img.shields.io/badge/Django-informational?style=flat&logo=Django&logoColor=044a16&color=292A2D" />
 <img align=center src="https://img.shields.io/badge/HTML-informational?style=flat&logo=HTML5&logoColor=E34F26&color=292A2D" />
 <img align=center src="https://img.shields.io/badge/CSS-informational?style=flat&logo=CSS3&logoColor=1572B6&color=292A2D" />
-<img align=center src="https://img.shields.io/badge/Javascript-informational?style=flat&logo=Javascript&logoColor=F7DF1E&color=292A2D" />
 <img align=center src="https://img.shields.io/badge/PostgreSQL-informational?style=flat&logo=PostgreSQL&logoColor=4169E1&color=292A2D" />
 <br/>
 </p>
